@@ -18,12 +18,7 @@ function App() {
     value: string,
     values: { from: never; to: never }
   ) => {
-
-    if (!/^\d+(\.\d{0,2})?$/.test(value)) {
-      return;
-    }
-
-
+    
     const floatValue = parseFloat(value);
 
     if (floatValue <= 0 || isNaN(floatValue) || value === '') {
