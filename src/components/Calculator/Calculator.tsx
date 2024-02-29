@@ -11,8 +11,8 @@ interface CalculatorType {
   to: Currency;
   onSubmit: () => void;
   onChangeAmount: (setFieldValue: FormikHelpers<unknown>["setFieldValue"], value: string, values: unknown) => void;
-  onChangeSelectFrom: (setFieldValue: FormikHelpers<unknown>["setFieldValue"], selected: Currency) => void;
-  onChangeSelectTo: (setFieldValue: FormikHelpers<unknown>["setFieldValue"], selected: Currency) => void;
+  onChangeSelectFrom: (setFieldValue: FormikHelpers<unknown>["setFieldValue"], selected: any) => void;
+  onChangeSelectTo: (setFieldValue: FormikHelpers<unknown>["setFieldValue"], selected: any) => void;
   onSwapSelect: (setFieldValue: FormikHelpers<unknown>["setFieldValue"], values: any) => void;
   options: OptionsSelectType[]
 }
@@ -46,6 +46,7 @@ function Calculator(
           setFieldValue,
         }) => (
         <div className={styles.container}>
+          {console.log(values)}
           <Input
             name={"amount"}
             id={"amount"}
@@ -60,7 +61,7 @@ function Calculator(
             id={"From"}
             value={values.from}
             options={options}
-            onChange={(e) => onChangeSelectFrom(setFieldValue, values, e.target.value)}
+            onChange={(e) => onChangeSelectFrom(setFieldValue, e.target.value)}
           />
           <Button onPress={() => onSwapSelect(setFieldValue, values)}/>
           <InputSelect
@@ -69,7 +70,7 @@ function Calculator(
             id={"To"}
             value={values.to}
             options={options}
-            onChange={(e) => onChangeSelectTo(setFieldValue, values, e.target.value)}
+            onChange={(e) => onChangeSelectTo(setFieldValue, e.target.value)}
           />
         </div>
       )}

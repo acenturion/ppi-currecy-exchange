@@ -44,7 +44,7 @@ function App() {
 
 
   const handleOnChangeSelectFrom = (
-    setFieldValues: (field: string, value: any) => void,
+    setFieldValues: (field: string, value: any,) => void,
     selected: string
   ) => {
     const result = options.find(option => option.key === selected);
