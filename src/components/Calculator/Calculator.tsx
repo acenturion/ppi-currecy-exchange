@@ -46,7 +46,6 @@ function Calculator(
           setFieldValue,
         }) => (
         <div className={styles.container}>
-          {console.log(values)}
           <Input
             name={"amount"}
             id={"amount"}
