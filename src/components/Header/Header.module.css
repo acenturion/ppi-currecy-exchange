@@ -1,0 +1,16 @@
+.container{
+    position: relative;
+    background-color: #0E1342;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    z-index: 10;
+}
+.text{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+}
+

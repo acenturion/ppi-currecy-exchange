@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.content {
+    min-width: 1024px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #000;
+    line-height: 23px;
+}
+
+@media (width <= 480px) {
+    .container {
+        padding: 16px;
+        text-align: center;
+        width: auto;
+    }
+
+    .content {
+        min-width: auto;
+        text-align: left;
+        margin-top: 0;
+    }
+}
