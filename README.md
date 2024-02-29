@@ -4,7 +4,7 @@
 - npm run dev
 - Ingresar a http://localhost:5173/
 
-### Algunas modificaiones
+### Algunas modificaciones
 
 - Todos los saldos se muestran con 2 decimales; internamente se utilizan todos los decimales.
 - Cuando se ingresa un nuevo monto, hay un debounce o retraso de 500 ms antes de llamar a la API para actualizar los nuevos valores.
